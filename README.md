@@ -27,6 +27,7 @@ Then open `http://localhost:8080`.
 1. Host the folder on any HTTPS static host (GitHub Pages, Netlify, Cloudflare Pages, etc.).
 2. Open the URL in Safari.
 3. Tap Share → Add to Home Screen.
+4. link:  https://k-z-allah.github.io/Wu-OS/
 
 ## Important limitation
 This is a web OS/PWA, not a replacement iOS firmware. HTML/CSS/JS cannot execute App Store IPA binaries or reproduce Apple’s private UIKit, SpringBoard, entitlements, code signing, sandbox, Secure Enclave, telephony stack, or iOS kernel. A true iOS-compatible OS would require a legally and technically different multi-year operating-system project.
