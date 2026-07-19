@@ -1,5 +1,3 @@
-# Wu-OS
-The saga continue. Wu tang wu tang
 # 36 Chambers OS
 
 A functional iOS-inspired progressive web app built with plain HTML, CSS and JavaScript.
