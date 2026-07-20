@@ -25,7 +25,7 @@ Then open `http://localhost:8080`.
 
 ### iPhone install
 1. Host the folder on any HTTPS static host (GitHub Pages, Netlify, Cloudflare Pages, etc.).
-2. Open the URL in Safari.
+2. Open the URL in Safari. https://k-z-allah.github.io/Wu-OS/
 3. Tap Share → Add to Home Screen.
 
 ## Important limitation
