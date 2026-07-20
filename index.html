@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#090909" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="36OS" />
+  <title>36 Chambers OS</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="boot" class="boot-screen" aria-label="Boot screen">
+    <div class="boot-mark">36</div>
+    <div class="boot-copy">ENTER THE CHAMBERS</div>
+    <div class="boot-bar"><span></span></div>
+  </div>
+
+  <main id="os" class="os hidden" data-wallpaper="chambers">
+    <div id="purpleHaze" class="purple-haze" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="status-bar">
+      <button id="statusTime" class="status-time" aria-label="Open control center">9:41</button>
+      <div class="status-island" aria-hidden="true"><span></span></div>
+      <div class="status-icons" aria-label="System status">
+        <span id="weedStatus" class="weed-status">☘︎</span>
+        <span>▮▮▮</span><span>⌁</span><span class="battery">87</span>
+      </div>
+    </header>
+
+    <section id="lockScreen" class="lock-screen">
+      <div class="lock-date" id="lockDate">SATURDAY, JULY 18</div>
+      <div class="lock-time" id="lockTime">9:41</div>
+      <div class="lock-quote">“Protect ya neck. Protect your data.”</div>
+      <button id="unlockButton" class="unlock-button">ENTER PASSCODE</button>
+      <div class="swipe-hint">Swipe up or tap to enter</div>
+    </section>
+
+    <section id="homeScreen" class="home-screen hidden" aria-label="Home screen">
+      <div class="hero-widget glass">
+        <div>
+          <small>CHAMBER STATUS</small>
+          <strong id="chamberTitle">Shaolin Secure</strong>
+          <p id="chamberSubtitle">No trackers detected · Local mode</p>
+        </div>
+        <button id="weedButton" class="weed-button" aria-pressed="false" title="Toggle weed mode">
+          <span>☘︎</span><b>WEED</b>
+        </button>
+      </div>
+
+      <div id="appGrid" class="app-grid"></div>
+
+      <nav class="dock glass" aria-label="Dock">
+        <button class="app-icon" data-app="phone"><span class="icon phone">☎</span><em>Phone</em></button>
+        <button class="app-icon" data-app="messages"><span class="icon messages">●●</span><em>Messages</em></button>
+        <button class="app-icon" data-app="browser"><span class="icon browser">◎</span><em>Browser</em></button>
+        <button class="app-icon" data-app="music"><span class="icon music">♪</span><em>Music</em></button>
+      </nav>
+    </section>
+
+    <section id="appWindow" class="app-window hidden" aria-live="polite">
+      <header class="app-header">
+        <button id="closeApp" class="close-app" aria-label="Close app">‹</button>
+        <h1 id="appTitle">App</h1>
+        <button id="appAction" class="app-action" aria-label="App action">•••</button>
+      </header>
+      <div id="appContent" class="app-content"></div>
+      <div class="home-indicator"></div>
+    </section>
+
+    <section id="controlCenter" class="control-center hidden glass" aria-label="Control Center">
+      <div class="control-top"><strong>CONTROL CHAMBER</strong><button id="closeControl">×</button></div>
+      <div class="control-grid">
+        <button class="control active">⌁<small>Wi‑Fi</small></button>
+        <button class="control active">ᛒ<small>Bluetooth</small></button>
+        <button class="control" id="focusControl">◐<small>Focus</small></button>
+        <button class="control" id="lockControl">▣<small>Lock</small></button>
+      </div>
+      <label class="slider-label">Brightness<input id="brightness" type="range" min="45" max="120" value="100" /></label>
+      <label class="slider-label">Purple haze<input id="haze" type="range" min="0" max="100" value="55" /></label>
+    </section>
+
+    <section id="passcodeSheet" class="passcode-sheet hidden">
+      <div class="passcode-card glass">
+        <button id="cancelPasscode" class="sheet-close">×</button>
+        <div class="lock-glyph">◉</div>
+        <h2>Enter Chamber Code</h2>
+        <div id="passDots" class="pass-dots"><i></i><i></i><i></i><i></i></div>
+        <div id="keypad" class="keypad"></div>
+        <small>Demo code: 3636</small>
+      </div>
+    </section>
+
+    <div id="toast" class="toast hidden"></div>
+  </main>
+
+  <template id="noteTemplate">
+    <article class="note-card"><strong></strong><p></p></article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
